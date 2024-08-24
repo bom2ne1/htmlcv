@@ -1,7 +1,13 @@
+/*
 const cursor = document.createElement('div');
 cursor.className = 'cursor';
 document.body.appendChild(cursor);
 
+function updateCursorLoc() {
+    cursor.style.left = `${lastX}px`;
+    cursor.style.top = `${lastY}px`;
+}
+*/
 const particlesPerFrame = 5;
 const maxParticles = 1000;
 let currParticles = 0;
@@ -11,8 +17,8 @@ function createParticle(x, y) {
     particle.className = 'particle';
     document.body.appendChild(particle);
 
-    particle.style.left = `${x}px`;
-    particle.style.top = `${y}px`;
+    particle.style.left = `${x+5}px`;
+    particle.style.top = `${y+8}px`;
 
     requestAnimationFrame(() => {
         particle.style.opacity = 1;
@@ -30,27 +36,35 @@ let lastClientY = 0;
 let lastX = 0;
 let lastY = 0;
 
+var shouldGen = false;
+var shouldGenTimeout = false;
+
+
+function activateShouldGen() {
+    shouldGen = true;
+    if (shouldGenTimeout) {
+        clearTimeout(shouldGenTimeout)
+        shouldGenTimeout = false;
+    }
+    shouldGenTimeout = setTimeout(()=> (shouldGen = false, shouldGenTimeout = false), 500)
+}
+
 document.addEventListener('mousemove', (e) => {
     lastClientX = e.clientX;
     lastClientY = e.clientY;
     lastX = lastClientX + window.scrollX;
-    lastY = lastClientY + window.scrollY
-    requestAnimationFrame(updateCursorLoc);
+    lastY = lastClientY + window.scrollY;
+    activateShouldGen();
 });
-
-function updateCursorLoc() {
-    cursor.style.left = `${lastX}px`;
-    cursor.style.top = `${lastY}px`;
-}
 
 window.addEventListener('scroll', (e) => {
     lastX = lastClientX + window.scrollX;
     lastY = lastClientY + window.scrollY;
-    requestAnimationFrame(updateCursorLoc);
+    activateShouldGen();
 });
 
 function generateParticles() {
-    if (lastX && lastY) {
+    if (shouldGen && lastX && lastY) {
         if (currParticles < maxParticles) {
             for (let i = 0; i < particlesPerFrame; i++) {
                 createParticle(lastX + Math.random() * 10 - 5, lastY + Math.random() * 10 - 5);
