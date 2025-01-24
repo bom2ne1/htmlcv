@@ -1,0 +1,57 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+visitor_logs.json
+event_logs.json
+feedback.json
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build files
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# IDE/Editor files
+.idea/
+.vscode/
+*.swp
+*.sublime-workspace
+*.sublime-project
+
+# Public folder specific
+coolerfavicons.zip
+favicon.zip
+How.the.Grinch.Stole.Christmas.*.mp4
+~$*
+
+# SSL Certificates
+/ssl
+*.pem
+
+# Uploads
+/uploads/
+
+
+# Temporary/Generated Files
+*.json
+*.lock
+
+# Specific folders
+/threejsedition/

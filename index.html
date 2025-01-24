@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joel Caley | Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/coolerfavicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/coolerfavicons/favicon.svg" />
+    <link rel="shortcut icon" href="/coolerfavicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/coolerfavicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="JoelCaley" />
+    <link rel="manifest" href="/coolerfavicons/site.webmanifest" />
+    <script src="threejs.min.js"></script>
+</head>
+
+<body>
+    <!-- <div class="cursor"></div> -->
+
+    <!-- <div id="contentNew">
+        <div class="sectionNew">
+            <h1>Joel Caley</h1>
+            <p>Full Stack Developer | Sydney / Remote</p>
+        </div>
+
+        <div class="sectionNew">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:jgcaley@gmail.com" id='emailContact'>jgcaley@gmail.com</a></p>
+            <p>Phone: <a href="tel:+61468898457">0468 898 457</a></p>
+            <p>CV: <a href="/joelcaleycv.docx">joelcaleycv.docx</a></p>
+        </div>
+        <div class="sectionNew">
+            <h2>About</h2>
+            <p>Full Stack Developer experienced in creating enterprise end-to-end solutions; automation systems; desktop, web and mobile applications; Experienced in the majority of the common frameworks and tools;</p>
+            <p>Looking for jobs in Sydney or remote.</p>
+        </div>
+
+        <div class="sectionNew">
+            <h2>Skills</h2>
+            <ul>
+                <li>
+                    <strong>Front-End:</strong><code> <span class="highlight">HTML, CSS (LESS, SASS), JavaScript (+TypeScript)</span>, <span class="highlight">Vue</span>, <span class="highlight">React</span>, AngularJS, Redux, Vuex, Nuxt, Mern; templating with EJS, Pug, Handlebars, etc, D3. Svelte.</code>
+                </li>
+                <li><strong>Back-End:</strong> <span class="highlight">Node.js</span>, SQL (<span class="highlight">Postgres</span>, MySQL, SQLite), <span class="highlight">MongoDB</span>, Firebase, <span class="highlight">Elasticsearch</span>, GraphQL, APIs (<span class="highlight">REST</span>, SOAP, JSON-RPC, graphQL), <span class="highlight">Express, Socket.io</span>, SSL (certbot, win-acme,)</li>
+                <li><strong>Testing & Automation:</strong> <span class="highlight">Unit Testing</span>, Jest, Jasmine; <span class="highlight">E2E Testing</span>, Puppeteer, Selenium</li>
+                <li><strong>DevOps:</strong> <span class="highlight">AWS (EC2, S3, CloudFront</span>, EB, Lambda), Git, SVN, Docker, Jenkins, PM2, Heroku</li>
+                <li><strong>Project Management:</strong> Jira, Confluence</li>
+                <li><strong>CMS:</strong> Drupal, WordPress, WooCommerce, Shopify</li>
+                <li><strong>Other Tools / Skills:</strong> Windows APIs, bash, Unix, SSH, MSYS2+Mingw/Cygwin, Adobe Creative Suite (Photoshop, AfterEffects, Illustrator), Python, Basic ASP.NET Core (C#, Blazor), Yarn, Gulp, Bower, Webpack, Unreal Engine 5, Basic PHP</li>
+            </ul>
+        </div>
+
+        <div class="sectionNew">
+            <h2>Employment History</h2>
+            <div class="job">
+                <h3>Full Stack Developer <span style="font-size: 9px">(Node Back-End Focused)</span></h3>
+                <h5>Gossipfrog | Jan 2022 - May 2024</h5>
+                <ul>
+                    <li>Large amounts of data collection, storage and handling. Via provided APIs where possible and other methods where not possible; e.g. puppeteer, selenium and userscripts.</li>
+                    <li>Automation and scheduling of various processes and procedures through IPC, etc.</li>
+                    <li>Developed apps for visualizing and handling data, and for controlling, executing, and scheduling relevant processes. Electron, React, Vue, Node, Elasticsearch.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Full Stack Developer <span style="font-size: 9px">(Vue Front-End Focused)</span></h3>
+                <h5><a href="https://www.dataprocessors.com.au/" id="dpLink">Data Processors</a> | Sep 2018 - Dec 2021</h5>
+                <ul>
+                    <li>Designed, developed, and deployed multiple Vue SPAs and Electron apps for enterprise use.</li>
+                    <li>Managed, visualized, and manipulated large data sets and databases (Elasticsearch).</li>
+                    <li>Built frontends (mostly vue) to call custom built apis that perform various tasks – often also involving building something else (node, python, bash) to perform said tasks.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Web Designer and Developer</h3>
+                <h5><a href="https://bigads.co/" id="bigAdsLink">Big Mobile</a> | Jul 2016 - Sep 2017</h5>
+                <ul>
+                    <li>Designed, developed, and deployed a range of HTML5/JS ads and custom ad formats, ensuring functionality across multiple platforms and devices. Hosted via Sizmek.</li>
+                    <li>Created a React (w MongoDB) full stack SPA to showcase company products.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Full Stack Developer</h3>
+                <h5>Freelance&Personal | Dec 2013 - Present</h5>
+                <ul>
+                    <li>Designed, developed, deployed, and managed a mix of standard HTML/JS websites and SPAs - primarily using Vue, with some React and Angular, asp.net/blazor. Featuring node, .net, MongoDB, Firebase, AWS DynamoDB and Elasticsearch where desired or required.</li>
+                    <li>Developed eCommerce solutions using multiple platforms such as WordPress, Drupal, Vue, and React (with relevant backend/tools).</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="sectionNew">
+            <h2>Some Example Enterprise Projects</h2>
+            <div class="projectsWrap">
+                <div class="project">
+                    <h3>Odds Explorer</h3>
+                    <h5>Vue.js, Node.js, D3.js</h5>
+                    <ul>
+                        <li>A very large, enterprise Vue.js application for odds analysis and visualization. Sole front-end dev; Worked with team for backend dev. Integrates with real-time data sources and provides detailed insights through customizable charts and reports. Very extensive front-end app with lots of functionality.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Synapse Explorer</h3>
+                    <h5>Vue.js, Node.js, Elasticsearch</h5>
+                    <ul>
+                        <li>A large enterprise app for managing and analyzing Elasticsearch data streams. Offers advanced search capabilities and interactive visualizations for data exploration and monitoring.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Thrift Explorer</h3>
+                    <h5>Vue.js, Node.js, Electron</h5>
+                    <ul>
+                        <li>An enterprise Electron-based app designed to send/run custom requests (via gui) to other programs (often C, compiled windows binary; some python or js scripts, etc) on external systems and visualize the results. Provides multiple ways to interact with and analyse the output data.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Automation Tools</h3>
+                    <h5>nodejs, python, selenium, puppeteer, redis, apis, sockets</h5>
+                    <ul>
+                        <li>Created and managed a range of web automation processes. Multiple js and python apps to automate website and api interactions. Created 'apis' (via automation in puppeteer/selenium) for select processes. Centralised process management, scheduling and record keeping via node; ipc/streams, db and websockets. Also scraped and stored (with relevant caching and memoization) vast amounts of data via various methods.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3><a href="https://showcase.bigads.co/" id="bigAdsShowcaseLink">Big Mobile Showcase</a></h3>
+                    <h5>HTML5, JavaScript, Node.js, Socket.io, react</h5>
+                    <ul>
+                        <li>A react SPA that showcased ads created by the agency. Mostly used by sales team (but still useful outside sales); can search/sort/etc through the agencies catalogue.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3><a href="https://bigads.co/" id="bigAdsProjectLink">Big Mobile Ads</a></h3>
+                    <h5>HTML5, JavaScript, css3 animations, sizmek</h5>
+                    <ul>
+                        <li>Many many HTML5 js css animated and interactive ads, particularly for mobile web. Some with very unique design and capabilities. (e.g. real-time opengl '3d' video, gyroscope/acceleration stuff, custom full-fledged ad-sized 'games')</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Yert</h3>
+                    <h5>React, Electron, D3.js</h5>
+                    <ul>
+                        <li>Yert is a desktop app for marketplace analysis and transaction tracking. It includes a data table for market prices and visualizations using D3.js, allowing users to analyse price trends and monitor transactions in real time.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>BOMCS WebSocket Server</h3>
+                    <h5>Node.js, WebSockets, postgresql</h5>
+                    <ul>
+                        <li>This server app acts as a central hub for data between front-end clients and backend services using WebSockets. It handles real-time communication and coordinates data from multiple sources. Reads/writes data from filesystem and postgres db.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="projectsWrap">
+                <div class="project">
+                    <h3>Getter Apps</h3>
+                    <h5>Node.js, WebSockets</h5>
+                    <ul>
+                        <li>A set of Node.js scripts that interact with various marketplace APIs for data fetching, purchasing, and listing items. They work together with the BOMCS server to automate real-time deal discovery and transactions.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Instagram Video Cutter and Poster</h3>
+                    <h5>Node.js, react, electron, ffmpeg, instagram api</h5>
+                    <ul>
+                        <li>Fully automates the process of video editing, including seamless trimming, generation of dynamic poster images with custom text overlays, and direct posting to Instagram with tailored titles, captions, and hashtags.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Results Monitor</h3>
+                    <h5>Node.js, Express, D3.js</h5>
+                    <ul>
+                        <li>A web-based monitoring tool that visualizes wallet variations using interactive D3.js charts. Integrates with the other apps for real-time data visualization.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Network Monitor</h3>
+                    <h5>Node.js, Express, SystemInformation, pkg</h5>
+                    <ul>
+                        <li>A standalone app that simply monitors network usage over time. Hosts a local web page to visualize system data. I just needed a simple way to do this but all already existing apps were too convoluted and/or required payment.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>D4 OCR calculator</h3>
+                    <h5>Python, PyTesseract, Threading, Win32GUI</h5>
+                    <ul>
+                        <li>A Python app that screen captures and transcribes on-screen, in-app text; performs calculations on read text, on multiple threads; and overlays results in a transparent window on top of the app. Real-time tool for tracking and enhancing understanding of data within said app.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Key Waveforms Visualiser</h3>
+                    <h5>js, python, canvas, numpy</h5>
+                    <ul>
+                        <li>Visualises waveforms of user defined frequencies. Useful for easily visualising chords.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Wizardio</h3>
+                    <h5>HTML5, JavaScript, Node.js, Socket.io</h5>
+                    <ul>
+                        <li>A real-time multiplayer game built with vanilla JavaScript and Node.js. It features client-side prediction and interpolation and server-side reconciliation for smooth gameplay across multiple players.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>BOM|2NE1</h3>
+                    <h5>Drupal, Ubercart, AWS, Bootstrap</h5>
+                    <ul>
+                        <li>An e-commerce website built using Drupal and Ubercart, AWS hosting. It features a responsive design and a custom checkout flow.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3><a href="http://starpoll.me" id="starpollLink">Star Poll</a></h3>
+                    <h5>AngularJS, Firebase, Materialize</h5>
+                    <ul>
+                        <li>A single-page app that allows users to create and vote on polls. It's built with AngularJS and Firebase, featuring real-time updates and a responsive design.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Loqus Demo</h3>
+                    <h5>HTML5, CSS3, JavaScript, Apache</h5>
+                    <ul>
+                        <li>A custom showcase website for a mobile app, designed based on provided Photoshop designs. The site is responsive and optimized for fast performance across devices.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+    <header>
+        <h1>Joel Caley</h1>
+        <p>Full Stack Developer | Sydney / Remote</p>
+    </header>
+    <div id="mainmain">
+        <section class="contact" id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:jgcaley@gmail.com" id='emailContact'>jgcaley@gmail.com</a></p>
+            <p>Phone: <a href="tel:+61468898457">0468 898 457</a></p>
+            <p>CV: <a href="/joelcaleycv.docx">joelcaleycv.docx</a></p>
+        </section>
+        <section class="about" id="about">
+            <h2>About</h2>
+            <p>Full Stack Developer experienced in creating enterprise end-to-end solutions; Automation systems; desktop and web applications; Experienced in the majority of the common frameworks and tools;</p>
+            <p>Looking for jobs in Sydney or remote.</p>
+        </section>
+        <section class="skills" id="skills">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>
+                    <strong>Front-End:</strong><code> <span class="highlight">HTML, CSS (LESS, SASS), JavaScript (+TypeScript), Vue, React</span>, AngularJS, Redux, Vuex, Nuxt, Mern; templating with EJS, Pug, Handlebars, etc, D3. Svelte.</code>
+                </li>
+                <li><strong>Back-End:</strong> <span class="highlight">Node.js, Express, Elasticsearch, MongoDB, Firebase</span>, SQL (Postgres, MySQL, SQLite), GraphQL, APIs (<span class="highlight">REST</span>, SOAP, JSON-RPC), <span class="highlight">Socket.io</span>, SSL (certbot, win-acme,)</li>
+                <li><strong>Testing & Automation:</strong> <span class="highlight">Unit Testing</span>, Jest, Jasmine; <span class="highlight">E2E Testing</span>, Puppeteer, Selenium</li>
+                <li><strong>DevOps:</strong> <span class="highlight">AWS (EC2, S3, CloudFront</span>, EB, Lambda), Git, SVN, Docker, Jenkins, PM2, Heroku</li>
+                <li><strong>Project Management:</strong> Jira, Confluence</li>
+                <li><strong>CMS:</strong> Drupal, WordPress, WooCommerce, Shopify</li>
+                <li><strong>Other Tools / Skills:</strong> Windows APIs, bash, Unix, SSH, MSYS2+Mingw/Cygwin, Adobe Creative Suite (Photoshop, AfterEffects, Illustrator), Python, Basic ASP.NET Core (C#, Blazor), Yarn, Gulp, Bower, Webpack, Unreal Engine 5, Basic PHP</li>
+            </ul>
+        </section>
+        <section class="experience" id="experience">
+            <h2>Employment History</h2>
+            <div class="job">
+                <h3>Full Stack Developer <span style="font-size: 9px">(2.42 years | Node Back-End & Automation Focused)</span></h3>
+                <h5>Gossipfrog | Jan 2022 - May 2024</h5>
+                <ul>
+                    <li>Large amounts of data collection, storage and handling. Via APIs where possible and other methods where not possible; e.g. puppeteer, selenium and userscripts.</li>
+                    <li>Automation and scheduling of various processes (mostly node&python) and procedures through IPC, websockets, cron, pm2, etc.</li>
+                    <li>Developed apps for visualizing and handling data, and for controlling, executing, and scheduling relevant processes. Vue, Node, Electron, React, Elasticsearch.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Full Stack Developer <span style="font-size: 9px">(3.33 years | Vue Front-End Focused)</span></h3>
+                <h5><a href="https://www.dataprocessors.com.au/" id="dpLink">Data Processors</a> | Sep 2018 - Dec 2021</h5>
+                <ul>
+                    <li>Designed, developed, and deployed multiple large Vue SPAs and Electron apps for internal enterprise use.</li>
+                    <li>Visualized, and manipulated large data sets (via Elasticsearch).</li>
+                    <li>Built frontends (mostly vue) to call custom built apis that perform various tasks – often also involving building something else (node, python, bash) to perform said tasks.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Web Designer and Developer <span style="font-size: 9px">(1.25 years | HTML, JS, Design, Web Advertising, some React)</span></h3>
+                <h5><a href="https://bigads.co/" id="bigAdsLink">Big Mobile</a> | Jul 2016 - Sep 2017</h5>
+                <ul>
+                    <li>Designed, developed, and deployed a range of HTML5/JS ads and custom ad formats, ensuring functionality across multiple platforms and devices. Hosted via Sizmek.</li>
+                    <li>Created a React (w MongoDB) full stack SPA to showcase company products.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <h3>Full Stack Developer <span style="font-size: 9px">(11.17 years)</span></h3>
+                <h5>Freelance&Personal | Dec 2013 - Present</h5>
+                <ul>
+                    <li>Designed, developed, deployed, and managed a mix of standard HTML/JS websites and SPAs - primarily using Vue, with some React and Angular, asp.net/blazor. Featuring node, .net, MongoDB, Firebase, AWS DynamoDB and Elasticsearch where desired or required.</li>
+                    <li>Developed eCommerce solutions using multiple platforms such as WordPress, Drupal, Vue, and React (with relevant backend/tools).</li>
+                </ul>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <h2>Some Example Projects</h2>
+            <div class="projectsWrap">
+                <div class="project">
+                    <h3>Odds Explorer</h3>
+                    <h5>Vue.js, Node.js, D3.js</h5>
+                    <ul>
+                        <li>A very large, enterprise Vue.js application for odds analysis and visualization. Sole front-end dev; Worked with team for backend dev (go) for private API and a nodejs server acting as middleware for accessing public API's. Integrates with real-time data sources and provides detailed insights through customizable charts and reports. Very extensive front-end app with lots of functionality.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Synapse Explorer</h3>
+                    <h5>Vue.js, Node.js, Elasticsearch</h5>
+                    <ul>
+                        <li>A large enterprise app for managing and analyzing Elasticsearch data streams. Offers advanced search capabilities and interactive visualizations for data exploration and monitoring.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Thrift Explorer</h3>
+                    <h5>Vue.js, Node.js, Electron</h5>
+                    <ul>
+                        <li>An enterprise Electron-based app designed to send/run custom requests (via gui) to other programs (often C, compiled windows binary; some python or js scripts, etc) on external systems and visualize the results. Provides multiple ways to interact with and analyse the output data.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Automation Tools</h3>
+                    <h5>nodejs, python, selenium, puppeteer, redis, apis, sockets</h5>
+                    <ul>
+                        <li>Created and managed a range of web automation processes. Multiple js and python apps to automate website and api interactions. Created 'apis' (via automation in puppeteer/selenium) for select processes. Centralised process management, scheduling and record keeping via node; ipc/streams, db and websockets. Also scraped and stored (with relevant caching and memoization) vast amounts of data via various methods.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3><a href="https://showcase.bigads.co/" id="bigAdsShowcaseLink">Big Mobile Showcase</a></h3>
+                    <h5>HTML5, JavaScript, Node.js, Socket.io, react</h5>
+                    <ul>
+                        <li>A react SPA that showcased ads created by the agency. Mostly used by sales team (but still useful outside sales); can search/sort/etc through the agencies catalogue.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3><a href="https://bigads.co/" id="bigAdsProjectLink">Big Mobile Ads</a></h3>
+                    <h5>HTML5, JavaScript, css3 animations, sizmek</h5>
+                    <ul>
+                        <li>Many many HTML5 js css animated and interactive ads, particularly for mobile web. Some with very unique design and capabilities. (e.g. real-time opengl '3d' video, gyroscope/acceleration stuff, custom full-fledged ad-sized 'games')</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Yert</h3>
+                    <h5>React, Electron, D3.js</h5>
+                    <ul>
+                        <li>Yert is a desktop app for marketplace analysis and transaction tracking. It includes a data table for market prices and visualizations using D3.js, allowing users to analyse price trends and monitor transactions in real time.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>BOMCS WebSocket Server</h3>
+                    <h5>Node.js, WebSockets, postgresql</h5>
+                    <ul>
+                        <li>This server app acts as a central hub for data between front-end clients and backend services using WebSockets. It handles real-time communication and coordinates data from multiple sources. Reads/writes data from filesystem and postgres db.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="projectsWrap">
+                <div class="project">
+                    <h3>Getter Apps</h3>
+                    <h5>Node.js, WebSockets</h5>
+                    <ul>
+                        <li>A set of Node.js scripts that interact with various marketplace APIs for data fetching, purchasing, and listing items. They work together with the BOMCS server to automate real-time deal discovery and transactions.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Instagram Video Cutter and Poster</h3>
+                    <h5>Node.js, react, electron, ffmpeg, instagram api</h5>
+                    <ul>
+                        <li>Fully automates the process of video editing, including seamless trimming, generation of dynamic poster images with custom text overlays, and direct posting to Instagram with tailored titles, captions, and hashtags.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Results Monitor</h3>
+                    <h5>Node.js, Express, D3.js</h5>
+                    <ul>
+                        <li>A web-based monitoring tool that visualizes wallet variations using interactive D3.js charts. Integrates with the other apps for real-time data visualization.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Network Monitor</h3>
+                    <h5>Node.js, Express, SystemInformation, pkg</h5>
+                    <ul>
+                        <li>A standalone app that simply monitors network usage over time. Hosts a local web page to visualize system data. I just needed a simple way to do this but all already existing apps were too convoluted and/or required payment.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>D4 OCR calculator</h3>
+                    <h5>Python, PyTesseract, Threading, Win32GUI</h5>
+                    <ul>
+                        <li>A Python app that screen captures and transcribes on-screen, in-app text; performs calculations on read text, on multiple threads; and overlays results in a transparent window on top of the app. Real-time tool for tracking and enhancing understanding of data within said app.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Key Waveforms Visualiser</h3>
+                    <h5>js, python, canvas, numpy</h5>
+                    <ul>
+                        <li>Visualises waveforms of user defined frequencies. Useful for easily visualising chords.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Wizardio</h3>
+                    <h5>HTML5, JavaScript, Node.js, Socket.io</h5>
+                    <ul>
+                        <li>A real-time multiplayer game built with vanilla JavaScript and Node.js. It features client-side prediction and interpolation and server-side reconciliation for smooth gameplay across multiple players.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>BOM|2NE1</h3>
+                    <h5>Drupal, Ubercart, AWS, Bootstrap</h5>
+                    <ul>
+                        <li>An e-commerce website built using Drupal and Ubercart, AWS hosting. It features a responsive design and a custom checkout flow.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3><a href="http://starpoll.me" id="starpollLink">Star Poll</a></h3>
+                    <h5>AngularJS, Firebase, Materialize</h5>
+                    <ul>
+                        <li>A single-page app that allows users to create and vote on polls. It's built with AngularJS and Firebase, featuring real-time updates and a responsive design.</li>
+                    </ul>
+                </div>
+                <div class="project">
+                    <h3>Loqus Demo</h3>
+                    <h5>HTML5, CSS3, JavaScript, Apache</h5>
+                    <ul>
+                        <li>A custom showcase website for a mobile app, designed based on provided Photoshop designs. The site is responsive and optimized for fast performance across devices.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Email <a href="mailto:jgcaley@gmail.com" id="emailFooter">jgcaley@gmail.com</a> for more information.</p>
+        <!-- <p style="font-size: 10px; margin-top: 20px">PS: I know this website is mid and silly, I just made it quickly to host my cv is all, don't let it distract from my actual experience and capabilities.</p> -->
+        <!-- <p style="padding: 0 50px; font-family: monospace; font-size: 9px">Note: I'm collecting non-identifiable visitor data for personal analytics purposes (e.g. to see what recruiters/employers actually look at and interact with, at what time, how many visits, what device, etc).<br>This information is used solely by me to improve the site and tailor it for potential employers. At no point will it ever be shared with any third parties.<br>If you would like me to delete any data associated with this session: Please leave a message (bottom right) to let me know.</p> -->
+    </footer>
+    <!-- <canvas id="paintCanvas"></canvas> -->
+    <div id="gameBox" style="position: relative">
+        <canvas id="gameCanvas"></canvas>
+        <footer style="position: absolute; bottom: 0; width: 100%">
+            <div id="gameFooterWrap">
+                <p>Move with <code style='background: rgba(255,255,255,0.12); padding: 1px 5px;'>W S A D</code> | Attack with <code style='background: rgba(255,255,255,0.12); padding: 1px 5px;'>spacebar</code></p>
+                <p>Thou art a noble paladin, sworn to uphold honour, justice, victory, and glory; armed with thy gleaming golden spear.</p>
+                <p>Hie thee forth on a most righteous quest to smite the dreaded, greedy villain. May Providence grant thee good fortune and a stout heart!</p>
+            </div>
+        </footer>
+    </div>
+    <div id="parallaxCanvases">
+        <canvas id="paintCanvas"></canvas>
+        <canvas id="backgroundLayer"></canvas>
+        <canvas id="foregroundLayer"></canvas>
+    </div>
+    <canvas id="threejsCubeCanvas"></canvas>
+    <!-- <div class="cube-wrapper">
+        <div class="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+    </div> -->
+    <div class="scene">
+        <div class="bird">
+            <div class="birdcube" id="body1">
+                <div class="birdface front body-cube"></div>
+                <div class="birdface back body-cube"></div>
+                <div class="birdface right body-cube"></div>
+                <div class="birdface left body-cube"></div>
+                <div class="birdface top body-cube"></div>
+                <div class="birdface bottom body-cube"></div>
+            </div>
+            <div class="birdcube" id="body2">
+                <div class="birdface front body-cube"></div>
+                <div class="birdface back body-cube"></div>
+                <div class="birdface right body-cube"></div>
+                <div class="birdface left body-cube"></div>
+                <div class="birdface top body-cube"></div>
+                <div class="birdface bottom body-cube"></div>
+            </div>
+            <div class="birdcube" id="head">
+                <div class="birdface front body-cube"></div>
+                <div class="birdface back body-cube"></div>
+                <div class="birdface right body-cube"></div>
+                <div class="birdface left body-cube"></div>
+                <div class="birdface top body-cube"></div>
+                <div class="birdface bottom body-cube"></div>
+            </div>
+            <div class="birdcube" id="beak">
+                <div class="birdface front beak-cube"></div>
+                <div class="birdface back beak-cube"></div>
+                <div class="birdface right beak-cube"></div>
+                <div class="birdface left beak-cube"></div>
+                <div class="birdface top beak-cube"></div>
+                <div class="birdface bottom beak-cube"></div>
+            </div>
+            <div class="wing" id="leftWing">
+                <div class="wing-face front wing-cube"></div>
+                <div class="wing-face back wing-cube"></div>
+                <div class="wing-face right wing-cube"></div>
+                <div class="wing-face left wing-cube"></div>
+                <div class="wing-face top wing-cube"></div>
+                <div class="wing-face bottom wing-cube"></div>
+            </div>
+            <div class="wing" id="rightWing">
+                <div class="wing-face front wing-cube"></div>
+                <div class="wing-face back wing-cube"></div>
+                <div class="wing-face right wing-cube"></div>
+                <div class="wing-face left wing-cube"></div>
+                <div class="wing-face top wing-cube"></div>
+                <div class="wing-face bottom wing-cube"></div>
+            </div>
+        </div>
+    </div>
+    <div class="cubeSphere_scene">
+        <div class="cubeSphere">
+            <div class="cubeSphere_div cubeSphere_front"></div>
+            <div class="cubeSphere_div cubeSphere_back"></div>
+            <div class="cubeSphere_div cubeSphere_top"></div>
+            <div class="cubeSphere_div cubeSphere_bottom"></div>
+            <div class="cubeSphere_div cubeSphere_left"></div>
+            <div class="cubeSphere_div cubeSphere_right"></div>
+            <div class="heartSphere" id="heartSphere"></div>
+        </div>
+    </div>
+    <div id="mandelbrotWrapper">
+        <canvas id="mandelbrotCanvas" width="200" height="200" style="width: 200px; height: 200px;"></canvas>
+        <div id="mandelbrotMessage">Can you find Zeno?<br><br><code style="padding: 0 5px; font-weight: normal"><span style='font-weight: 800; font-size: 16px;'>+ Zoom In +</span><br>ScrollUp or LeftClick<br><br><span style='font-weight: 800; font-size: 16px;'>- Zoom Out -</span><br>ScrollDown or RightClick</code><br><br></div>
+        <button id="mandelbrotResetButtonZZ">reset</button>
+    </div>
+    <div id="feedback-container">
+        <button id="minimize-feedback" title="Minimize">-</button>
+        <span>Leave a message</span>
+        <div id="feedback-form">
+            <input type="text" id="feedback-name" placeholder="Your name (optional)" />
+            <input type="email" id="feedback-email" placeholder="Your email (optional)" />
+            <textarea id="feedback-input" placeholder="Your message..."></textarea>
+            <div id="video-feedback-container">
+                <video id="feedback-video" autoplay controls muted></video>
+                <button id="toggle-recording">Record Video Message</button>
+                <!-- <button id="submit-video-feedback" disabled>Submit Video</button> -->
+                <button id="delete-video-feedback">Delete Video</button>
+            <button id="submit-feedback" disabled>Submit</button>
+            </div>
+        </div>
+    </div>
+    <script src="logger.js"></script>
+    <script src="script.js"></script>
+    <script src="gameScript.js"></script>
+</body>
+
+</html>
