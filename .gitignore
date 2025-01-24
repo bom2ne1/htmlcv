@@ -36,9 +36,9 @@ Thumbs.db
 *.sublime-project
 
 # Public folder specific
-/public/coolerfavicons.zip
-/public/favicon.zip
-/public/How.the.Grinch.Stole.Christmas.*.mp4
+coolerfavicons.zip
+favicon.zip
+How.the.Grinch.Stole.Christmas.*.mp4
 ~$*
 
 # SSL Certificates
